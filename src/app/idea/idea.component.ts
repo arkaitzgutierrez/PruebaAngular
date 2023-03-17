@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Producto } from 'src/modelos/producto';
 
 @Component({
   selector: 'app-idea',
@@ -7,4 +8,15 @@ import { Component } from '@angular/core';
 })
 export class IdeaComponent {
 
+  producto:Producto[]=[];
+
+  ngOninit():void{
+  this.producto=[
+    {
+      nombre : "Patata",
+    descripcion:"Las buenas",
+    precio:5
+    }
+  ]
+}
 }
